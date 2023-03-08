@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-links ul li:not(:first-child) {
+  color: hsl(0, 0%, 75%);
+}
+
+.footer-links ul li a:hover {
+  color: hsl(180, 66%, 49%);
+}
+
+.footer-socials img:hover {
+  filter: invert(30%) sepia(43%) saturate(726%) hue-rotate(130deg)
+    brightness(93%) contrast(85%);
+}
+
+button {
+  transition: all 0.1s ease-out;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 90%);
+  transform: translateY(-2px);
+  color: hsl(180, 66%, 49%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 90%);
+  transform: scale(1);
+}
+
+.nav-mobile-links::after {
+  content: '';
+  height: 1px;
+  width: 80%;
+  background-color: currentColor;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.3;
+}
+
+.input-container {
+  background: url('./images/bg-shorten-desktop.svg');
+  background-color: hsl(257, 27%, 26%);
+}
+
+.output-link::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: currentColor;
+  display: block;
+  margin: 1rem auto 0 auto;
+  opacity: 0.2;
+}
+
+@media (min-width: 768px) {
+  .output-link::after {
+    display: none;
+  }
+}
+
+.features-card::after {
+  content: '';
+  height: 10px;
+  width: 100%;
+  background-color: cyan;
+  display: block;
+  margin: 1rem auto 0 auto;
+  opacity: 0.2;
+}
+
+.cta-container {
+  background: url('./images/bg-boost-desktop.svg');
+  background-color: hsl(257, 27%, 26%);
+  background-size: cover;
+}
